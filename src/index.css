@@ -1,0 +1,69 @@
+@import './styles/tokens.css';
+@import './styles/animations.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-ui);
+  background: var(--bg);
+  color: var(--dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 3px;
+  border-radius: 3px;
+  background: #d3dde2;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--blue-deep);
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(20, 50, 90, 0.3);
+}
+
+.ac-scroll::-webkit-scrollbar { width: 6px; }
+.ac-scroll::-webkit-scrollbar-thumb {
+  background: #d3dde2;
+  border-radius: 6px;
+}
+
+.ac-inp {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--dark);
+  border: 1px solid rgba(120, 150, 165, 0.3);
+  border-radius: 9px;
+  padding: 8px 10px;
+  outline: none;
+  width: 100%;
+  background: #fff;
+}
+.ac-inp:focus { border-color: var(--blue); }

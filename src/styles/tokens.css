@@ -1,0 +1,39 @@
+:root {
+  --bg: #eef1f2;
+  --surface: rgba(255, 255, 255, 0.94);
+  --dark: #16242e;
+  --blue: #1f6fd4;
+  --blue-deep: #1559b0;
+  --teal: #2bb3a3;
+  --muted: #8aa0ab;
+  --muted-light: #9fb2bc;
+  --muted-border: rgba(120, 150, 165, 0.22);
+  --muted-border-light: rgba(120, 150, 165, 0.13);
+  --success: #1aa06a;
+  --purple: #6d52f5;
+  --amber: #df9620;
+  --red: #e04a3a;
+
+  --font-ui: 'Manrope', system-ui, sans-serif;
+  --font-mono: 'Roboto Mono', monospace;
+
+  --radius-card: 20px;
+  --radius-card-sm: 16px;
+  --radius-card-lg: 24px;
+  --radius-btn: 13px;
+  --radius-badge: 9px;
+  --radius-chip: 8px;
+
+  --shadow-card: 0 18px 44px rgba(40, 80, 120, 0.12);
+  --shadow-card-lg: 0 28px 64px rgba(40, 80, 120, 0.16);
+  --shadow-card-xl: 0 40px 90px rgba(20, 50, 90, 0.28);
+  --shadow-btn: 0 12px 28px rgba(20, 40, 55, 0.22);
+  --shadow-btn-blue: 0 12px 28px rgba(31, 89, 176, 0.24);
+
+  --glass-bg: rgba(255, 255, 255, 0.94);
+  --glass-border: 1px solid rgba(120, 150, 165, 0.22);
+  --glass-blur: blur(12px);
+
+  --scene-w: 1280px;
+  --scene-h: 740px;
+}
