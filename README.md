@@ -1,73 +1,78 @@
-# React + TypeScript + Vite
+## AquaCast
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AquaCast is an AI-assisted mission planning and data review platform for autonomous water quality monitoring.
 
-Currently, two official plugins are available:
+Designed for environmental researchers and field scientists, AquaCast supports the end-to-end workflow of planning sampling missions, configuring collection parameters, reviewing collected data, and generating insights for future deployments.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Demo Walkthrough
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+Create Mission
+    ↓
+Review
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+##### Create Mission
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Plan and configure water sampling missions, including locations, sampling points, bottle configurations, sensors, depths, routes, and device pairing.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+#### Review
+
+Explore collected mission data through maps, visualizations, tables, and AI-assisted insights.
+
+### Current Status
+
+🚧 Work in Progress
+
+### Releases
+
+| Tag  | Description                                                   |
+| ---- | ------------------------------------------------------------- |
+| `V1` | First end-to-end AquaCast prototype (Create Mission + Review) |
+
+Return to this release:
+
+```bash
+git checkout V1
+```
+
+### Running Locally
+
+```bash
+git clone https://github.com/Joyce02122/AquaCast_Redesign.git
+cd AquaCast_Redesign
+
+pnpm install
+pnpm dev
+```
+
+Open:
+
+```text
+http://localhost:5173
+```
+
+### Tech Stack
+
+* React
+* TypeScript
+* Vite
+
+### Project Structure
+
+```text
+src/
+├── App.tsx
+├── components/
+│   ├── device/
+│   ├── layout/
+│   ├── map/
+│   ├── overlays/
+│   ├── panels/
+│   ├── review/
+│   └── ui/
+├── hooks/
+├── utils/
+├── constants.ts
+└── types.ts
 ```
